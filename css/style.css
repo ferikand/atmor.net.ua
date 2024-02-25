@@ -404,6 +404,7 @@ main {
   display: flex;
   align-items: center;
   margin: 2px;
+  box-sizing: border-box;
 }
 
 .appImg {
@@ -415,6 +416,14 @@ main {
   border: 2px solid #dc0132;
   border-radius: 5px;
   margin: 5px;
+}
+
+.variantBtn:hover,
+.card:hover {
+  transform: scale(1.01);
+}
+.variantBtn:hover {
+  cursor: pointer;
 }
 
 display: -ms-flexbox;
