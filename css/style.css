@@ -426,5 +426,10 @@ main {
   cursor: pointer;
 }
 
+.bigLogo {
+  max-width: 100%;
+  height: auto;
+}
+
 display: -ms-flexbox;
 display: flex;
