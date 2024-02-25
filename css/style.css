@@ -235,66 +235,12 @@ footer {
   padding-left: 0px;
   padding-right: 0px;
 }
-@media (max-width: 767px) {
-  .upper,
-  .lower {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    max-height: 177px;
-    overflow: hidden;
-  }
-}
-@media (max-width: 575px) {
-  .upper,
-  .lower {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    max-height: 177px;
-    max-width: 451px;
-    overflow: hidden;
-  }
-}
-@media (max-width: 540px) {
-  .upper,
-  .lower {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    max-height: 128px;
-    max-width: 333px;
-    overflow: hidden;
-  }
-}
-@media (max-width: 425px) {
-  .upper,
-  .lower {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    max-height: 84px;
-    max-width: 231px;
-    overflow: hidden;
-  }
-}
-@media (max-width: 320px) {
-  .upper,
-  .lower {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    max-height: 84px;
-    max-width: 466px;
-    overflow: hidden;
-  }
-}
+
 p {
   text-align: justify;
 }
 
 .whyAtmorPage {
-  /* background-color: #dc0132; */
   color: #7a7a7a;
   display: flex;
   flex-direction: column;
@@ -420,11 +366,72 @@ main {
 }
 .variantBtn:hover {
   cursor: pointer;
+  color: #cbcbcb;
+  background-color: #333333;
 }
 
 .bigLogo {
   max-width: 100%;
   height: auto;
+}
+
+@media (max-width: 767px) {
+  .upper,
+  .lower {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-height: 177px;
+    overflow: hidden;
+  }
+}
+@media (max-width: 575px) {
+  .upper,
+  .lower {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-height: 177px;
+    max-width: 451px;
+    overflow: hidden;
+  }
+}
+@media (max-width: 540px) {
+  .upper,
+  .lower {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-height: 128px;
+    max-width: 333px;
+    overflow: hidden;
+  }
+}
+@media (max-width: 425px) {
+  .upper,
+  .lower {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-height: 84px;
+    max-width: 231px;
+    overflow: hidden;
+  }
+}
+@media (max-width: 320px) {
+  .upper,
+  .lower {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-height: 84px;
+    max-width: 466px;
+    overflow: hidden;
+  }
+
+  .bigLogo {
+    max-width: 318px;
+  }
 }
 
 display: -ms-flexbox;
