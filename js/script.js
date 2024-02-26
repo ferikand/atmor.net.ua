@@ -1,5 +1,3 @@
-// Чому атмор
-
 const frontPage = document.querySelector(".frontPage");
 const whyAtmorPage = document.querySelector(".whyAtmorPage");
 const turnBackTomainPage = document.querySelector(".turnBackTomainPage");
@@ -29,15 +27,11 @@ const basicEl = document.querySelector(".basicEl");
 const inline5El = document.querySelector(".inline5KWEl");
 const inline7El = document.querySelector(".inline7KWEl");
 
-// functionality of whyAtmorPage menu
-
 qualitySect.classList.add("hidden");
 greenTechSect.classList.add("hidden");
 experienceSect.classList.add("hidden");
 mainOfWhySect.classList.add("hidden");
 heatersPage.classList.add("hidden");
-
-// pushing menu btns
 
 document.addEventListener("click", (e) => {
   e.preventDefault();
@@ -49,7 +43,6 @@ document.addEventListener("click", (e) => {
     greenTechSect.classList.add("hidden");
     experienceSect.classList.add("hidden");
   }
-
   if (e.target.classList.value === "whyMainLink") {
     aboutSect.classList.add("hidden");
     qualitySect.classList.add("hidden");
@@ -77,20 +70,17 @@ document.addEventListener("click", (e) => {
     greenTechSect.classList.remove("hidden");
     experienceSect.classList.add("hidden");
   }
-
   if (e.target.classList.contains("whyAtmorBtn")) {
     frontPage.classList.add("hidden");
     aboutSect.classList.remove("hidden");
     whyAtmorPage.classList.remove("hidden");
     applPage.classList.add("hidden");
   }
-
   if (e.target.classList.value === "turnBackTomainPage") {
     frontPage.classList.remove("hidden");
     whyAtmorPage.classList.add("hidden");
     applPage.classList.add("hidden");
   }
-
   if (
     e.target.classList.contains("applicationBtn") ||
     e.target.classList.contains("backToAppl")
@@ -104,7 +94,6 @@ document.addEventListener("click", (e) => {
     inline5El.classList.remove("hidden");
     inline7El.classList.remove("hidden");
   }
-
   if (e.target.classList.value === "bigLogo") {
     qualitySect.classList.add("hidden");
     greenTechSect.classList.add("hidden");
@@ -115,19 +104,16 @@ document.addEventListener("click", (e) => {
     frontPage.classList.remove("hidden");
     applPage.classList.add("hidden");
   }
-
   if (e.target.classList.contains("showerBtn")) {
     applPage.classList.add("hidden");
     heatersPage.classList.remove("hidden");
     hotapEl.classList.add("hidden");
   }
-
   if (e.target.classList.contains("sinkBtn")) {
     applPage.classList.add("hidden");
     heatersPage.classList.remove("hidden");
     basicEl.classList.add("hidden");
   }
-
   if (
     e.target.classList.contains("homeBtn") ||
     e.target.classList.contains("businessBtn")
