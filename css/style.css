@@ -389,6 +389,12 @@ main {
   max-height: 282px;
 }
 
+.heatersContaner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 @media (max-width: 767px) {
   .upper,
   .lower {
