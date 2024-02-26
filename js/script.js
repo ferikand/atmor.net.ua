@@ -37,10 +37,46 @@ experienceSect.classList.add("hidden");
 mainOfWhySect.classList.add("hidden");
 heatersPage.classList.add("hidden");
 
-// pushing Btn whyAtmorBtn
+// pushing menu btns
 
 document.addEventListener("click", (e) => {
   e.preventDefault();
+
+  if (e.target.classList.contains("aboutBtn")) {
+    aboutSect.classList.remove("hidden");
+    mainOfWhySect.classList.add("hidden");
+    qualitySect.classList.add("hidden");
+    greenTechSect.classList.add("hidden");
+    experienceSect.classList.add("hidden");
+  }
+
+  if (e.target.classList.value === "whyMainLink") {
+    aboutSect.classList.add("hidden");
+    qualitySect.classList.add("hidden");
+    greenTechSect.classList.add("hidden");
+    experienceSect.classList.add("hidden");
+  }
+  if (e.target.classList.value === "experienceLink") {
+    aboutSect.classList.add("hidden");
+    mainOfWhySect.classList.add("hidden");
+    qualitySect.classList.add("hidden");
+    greenTechSect.classList.add("hidden");
+    experienceSect.classList.remove("hidden");
+  }
+  if (e.target.classList.value === "qualityLink") {
+    aboutSect.classList.add("hidden");
+    mainOfWhySect.classList.add("hidden");
+    qualitySect.classList.remove("hidden");
+    greenTechSect.classList.add("hidden");
+    experienceSect.classList.add("hidden");
+  }
+  if (e.target.classList.value === "greenTechLink") {
+    aboutSect.classList.add("hidden");
+    mainOfWhySect.classList.add("hidden");
+    qualitySect.classList.add("hidden");
+    greenTechSect.classList.remove("hidden");
+    experienceSect.classList.add("hidden");
+  }
 
   if (e.target.classList.contains("whyAtmorBtn")) {
     frontPage.classList.add("hidden");
@@ -97,47 +133,5 @@ document.addEventListener("click", (e) => {
   ) {
     applPage.classList.add("hidden");
     heatersPage.classList.remove("hidden");
-  }
-});
-
-// pushing menu btns
-
-document.addEventListener("click", (e) => {
-  e.preventDefault();
-
-  if (e.target.classList.contains("aboutBtn")) {
-    aboutSect.classList.remove("hidden");
-    mainOfWhySect.classList.add("hidden");
-    qualitySect.classList.add("hidden");
-    greenTechSect.classList.add("hidden");
-    experienceSect.classList.add("hidden");
-  }
-
-  if (e.target.classList.value === "whyMainLink") {
-    aboutSect.classList.add("hidden");
-    qualitySect.classList.add("hidden");
-    greenTechSect.classList.add("hidden");
-    experienceSect.classList.add("hidden");
-  }
-  if (e.target.classList.value === "experienceLink") {
-    aboutSect.classList.add("hidden");
-    mainOfWhySect.classList.add("hidden");
-    qualitySect.classList.add("hidden");
-    greenTechSect.classList.add("hidden");
-    experienceSect.classList.remove("hidden");
-  }
-  if (e.target.classList.value === "qualityLink") {
-    aboutSect.classList.add("hidden");
-    mainOfWhySect.classList.add("hidden");
-    qualitySect.classList.remove("hidden");
-    greenTechSect.classList.add("hidden");
-    experienceSect.classList.add("hidden");
-  }
-  if (e.target.classList.value === "greenTechLink") {
-    aboutSect.classList.add("hidden");
-    mainOfWhySect.classList.add("hidden");
-    qualitySect.classList.add("hidden");
-    greenTechSect.classList.remove("hidden");
-    experienceSect.classList.add("hidden");
   }
 });
