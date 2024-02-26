@@ -17,6 +17,9 @@ const footer = document.querySelector("footer");
 const causesLinks = document.querySelector(".causesLinks");
 const applPage = document.querySelector(".applPage");
 const applicationBtn = document.querySelector(".applicationBtn");
+const heatersPage = document.querySelector(".heatersPage");
+
+const bigLogo = document.querySelectorAll(".bigLogo");
 
 // functionality of whyAtmorPage menu
 
@@ -24,6 +27,7 @@ qualitySect.classList.add("hidden");
 greenTechSect.classList.add("hidden");
 experienceSect.classList.add("hidden");
 mainOfWhySect.classList.add("hidden");
+heatersPage.classList.add("hidden");
 
 // pushing Btn whyAtmorBtn
 
@@ -46,6 +50,17 @@ document.addEventListener("click", (e) => {
     applPage.classList.remove("hidden");
     frontPage.classList.add("hidden");
     whyAtmorPage.classList.add("hidden");
+  }
+
+  if (e.target.classList.value === "bigLogo") {
+    qualitySect.classList.add("hidden");
+    greenTechSect.classList.add("hidden");
+    experienceSect.classList.add("hidden");
+    mainOfWhySect.classList.add("hidden");
+    heatersPage.classList.add("hidden");
+    whyAtmorPage.classList.add("hidden");
+    frontPage.classList.remove("hidden");
+    applPage.classList.add("hidden");
   }
 });
 

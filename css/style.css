@@ -375,6 +375,10 @@ main {
   height: auto;
 }
 
+.bigLogo:hover {
+  cursor: pointer;
+}
+
 .heaterCard {
   max-width: 322px;
   max-height: 377px;
