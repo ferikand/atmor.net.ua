@@ -375,6 +375,20 @@ main {
   height: auto;
 }
 
+.heaterCard {
+  max-width: 322px;
+  max-height: 377px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heaterCardImg {
+  max-width: 282px;
+  max-height: 282px;
+}
+
 @media (max-width: 767px) {
   .upper,
   .lower {
