@@ -24,6 +24,10 @@ const showerBtn = document.querySelector(".showerBtn");
 const sinkBtn = document.querySelector(".sinkBtn");
 const homeBtn = document.querySelector(".homeBtn");
 const businessBtn = document.querySelector(".businessBtn");
+const hotapEl = document.querySelector(".hotapEl");
+const basicEl = document.querySelector(".basicEl");
+const inline5El = document.querySelector(".5KWEl");
+const inline7El = document.querySelector(".7KWEl");
 
 // functionality of whyAtmorPage menu
 
