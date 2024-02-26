@@ -80,6 +80,7 @@ document.addEventListener("click", (e) => {
 
   if (e.target.classList.contains("whyAtmorBtn")) {
     frontPage.classList.add("hidden");
+    aboutSect.classList.remove("hidden");
     whyAtmorPage.classList.remove("hidden");
     applPage.classList.add("hidden");
   }
