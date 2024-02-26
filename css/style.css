@@ -336,7 +336,7 @@ main {
   flex-wrap: wrap;
   /* overflow: auto; */
   justify-content: space-evenly;
-  padding: 6px;
+  padding: 1px;
   background-color: #7a7a7a;
   margin: 5px;
 }
