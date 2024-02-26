@@ -385,9 +385,6 @@ main {
   max-height: 377px;
   padding: 20px;
   margin: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   border-radius: 10px;
   box-shadow: -5px 1px 5px 3px rgba(0, 0, 0, 0.26);
 }
