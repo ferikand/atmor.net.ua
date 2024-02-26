@@ -18,8 +18,12 @@ const causesLinks = document.querySelector(".causesLinks");
 const applPage = document.querySelector(".applPage");
 const applicationBtn = document.querySelector(".applicationBtn");
 const heatersPage = document.querySelector(".heatersPage");
-
 const bigLogo = document.querySelectorAll(".bigLogo");
+const backToAppl = document.querySelector(".backToAppl");
+const showerBtn = document.querySelector(".showerBtn");
+const sinkBtn = document.querySelector(".sinkBtn");
+const homeBtn = document.querySelector(".homeBtn");
+const businessBtn = document.querySelector(".businessBtn");
 
 // functionality of whyAtmorPage menu
 
@@ -46,10 +50,14 @@ document.addEventListener("click", (e) => {
     applPage.classList.add("hidden");
   }
 
-  if (e.target.classList.contains("applicationBtn")) {
+  if (
+    e.target.classList.contains("applicationBtn") ||
+    e.target.classList.contains("backToAppl")
+  ) {
     applPage.classList.remove("hidden");
     frontPage.classList.add("hidden");
     whyAtmorPage.classList.add("hidden");
+    heatersPage.classList.add("hidden");
   }
 
   if (e.target.classList.value === "bigLogo") {
@@ -61,6 +69,11 @@ document.addEventListener("click", (e) => {
     whyAtmorPage.classList.add("hidden");
     frontPage.classList.remove("hidden");
     applPage.classList.add("hidden");
+  }
+
+  if (e.target.classList.contains("showerBtn")) {
+    applPage.classList.add("hidden");
+    heatersPage.classList.remove("hidden");
   }
 });
 

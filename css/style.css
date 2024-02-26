@@ -375,7 +375,8 @@ main {
   height: auto;
 }
 
-.bigLogo:hover {
+.bigLogo:hover,
+.backToAppl {
   cursor: pointer;
 }
 
