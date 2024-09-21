@@ -1,6 +1,6 @@
 const frontPage = document.querySelector(".frontPage");
 const whyAtmorPage = document.querySelector(".whyAtmorPage");
-const turnBackTomainPage = document.querySelector(".turnBackTomainPage");
+
 const whyAtmorBtn = document.querySelector(".whyAtmorBtn");
 const mainOfWhySect = document.querySelector(".mainOfWhy");
 const experienceSect = document.querySelector(".experiense");
@@ -27,60 +27,43 @@ const basicEl = document.querySelector(".basicEl");
 const inline5El = document.querySelector(".inline5KWEl");
 const inline7El = document.querySelector(".inline7KWEl");
 
-qualitySect.classList.add("hidden");
-greenTechSect.classList.add("hidden");
-experienceSect.classList.add("hidden");
-mainOfWhySect.classList.add("hidden");
-heatersPage.classList.add("hidden");
+// Проверяем наличие секций и скрываем их
+const sections = [
+  greenTechSect,
+  experienceSect,
+  mainOfWhySect,
+  aboutSect,
+  qualitySect,
+];
 
+sections.forEach((sec) => {
+  if (sec && sec != aboutSect) {
+    sec.classList.add("hidden");
+  }
+});
+
+// Логика обработки кликов
 document.addEventListener("click", (e) => {
-  e.preventDefault();
+  if (
+    e.target.tagName === "A" &&
+    e.target.getAttribute("href") === "index.html"
+  ) {
+    console.log("Ссылка на главную страницу была нажата");
+    return; // Ссылка на главную страницу работает
+  }
+
+  console.log("Другой элемент был нажат:", e.target);
 
   if (e.target.classList.contains("aboutBtn")) {
-    aboutSect.classList.remove("hidden");
-    mainOfWhySect.classList.add("hidden");
-    qualitySect.classList.add("hidden");
-    greenTechSect.classList.add("hidden");
-    experienceSect.classList.add("hidden");
+    showSection(aboutSect);
+  } else if (e.target.classList.contains("experienceLink")) {
+    showSection(experienceSect);
+  } else if (e.target.classList.contains("qualityLink")) {
+    showSection(qualitySect);
+  } else if (e.target.classList.contains("greenTechLink")) {
+    showSection(greenTechSect);
   }
-  if (e.target.classList.value === "whyMainLink") {
-    aboutSect.classList.add("hidden");
-    qualitySect.classList.add("hidden");
-    greenTechSect.classList.add("hidden");
-    experienceSect.classList.add("hidden");
-  }
-  if (e.target.classList.value === "experienceLink") {
-    aboutSect.classList.add("hidden");
-    mainOfWhySect.classList.add("hidden");
-    qualitySect.classList.add("hidden");
-    greenTechSect.classList.add("hidden");
-    experienceSect.classList.remove("hidden");
-  }
-  if (e.target.classList.value === "qualityLink") {
-    aboutSect.classList.add("hidden");
-    mainOfWhySect.classList.add("hidden");
-    qualitySect.classList.remove("hidden");
-    greenTechSect.classList.add("hidden");
-    experienceSect.classList.add("hidden");
-  }
-  if (e.target.classList.value === "greenTechLink") {
-    aboutSect.classList.add("hidden");
-    mainOfWhySect.classList.add("hidden");
-    qualitySect.classList.add("hidden");
-    greenTechSect.classList.remove("hidden");
-    experienceSect.classList.add("hidden");
-  }
-  if (e.target.classList.contains("whyAtmorBtn")) {
-    frontPage.classList.add("hidden");
-    aboutSect.classList.remove("hidden");
-    whyAtmorPage.classList.remove("hidden");
-    applPage.classList.add("hidden");
-  }
-  if (e.target.classList.value === "turnBackTomainPage") {
-    frontPage.classList.remove("hidden");
-    whyAtmorPage.classList.add("hidden");
-    applPage.classList.add("hidden");
-  }
+
   if (
     e.target.classList.contains("applicationBtn") ||
     e.target.classList.contains("backToAppl")
@@ -89,32 +72,28 @@ document.addEventListener("click", (e) => {
     frontPage.classList.add("hidden");
     whyAtmorPage.classList.add("hidden");
     heatersPage.classList.add("hidden");
-    hotapEl.classList.remove("hidden");
-    basicEl.classList.remove("hidden");
-    inline5El.classList.remove("hidden");
-    inline7El.classList.remove("hidden");
+    [hotapEl, basicEl, inline5El, inline7El].forEach((el) => {
+      if (el) el.classList.remove("hidden");
+    });
   }
-  if (e.target.classList.value === "bigLogo") {
-    qualitySect.classList.add("hidden");
-    greenTechSect.classList.add("hidden");
-    experienceSect.classList.add("hidden");
-    mainOfWhySect.classList.add("hidden");
-    heatersPage.classList.add("hidden");
-    whyAtmorPage.classList.add("hidden");
+
+  if (e.target.classList.contains("bigLogo")) {
+    sections.forEach((sec) => {
+      if (sec) sec.classList.add("hidden");
+    });
     frontPage.classList.remove("hidden");
     applPage.classList.add("hidden");
   }
+
   if (e.target.classList.contains("showerBtn")) {
     applPage.classList.add("hidden");
     heatersPage.classList.remove("hidden");
     hotapEl.classList.add("hidden");
-  }
-  if (e.target.classList.contains("sinkBtn")) {
+  } else if (e.target.classList.contains("sinkBtn")) {
     applPage.classList.add("hidden");
     heatersPage.classList.remove("hidden");
     basicEl.classList.add("hidden");
-  }
-  if (
+  } else if (
     e.target.classList.contains("homeBtn") ||
     e.target.classList.contains("businessBtn")
   ) {
@@ -122,3 +101,13 @@ document.addEventListener("click", (e) => {
     heatersPage.classList.remove("hidden");
   }
 });
+
+// Функция показа секции
+const showSection = (section) => {
+  if (section) {
+    sections.forEach((sec) => {
+      if (sec) sec.classList.add("hidden");
+    });
+    section.classList.remove("hidden");
+  }
+};

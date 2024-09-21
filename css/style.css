@@ -334,7 +334,15 @@ main {
 
 .applPage {
   text-align: center;
-  min-height: 92vh;
+  min-height: 76vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.appContainer {
+  width: 100%;
+  /* align-self: center; */
 }
 
 .grayBcg {
@@ -433,6 +441,7 @@ main {
 .hotapInfoContainer {
   display: flex;
   flex-direction: row;
+  min-height: 76vh;
 }
 
 @media (max-width: 767px) {
