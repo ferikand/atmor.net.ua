@@ -86,19 +86,23 @@ document.addEventListener("click", (e) => {
   }
 
   if (e.target.classList.contains("showerBtn")) {
-    applPage.classList.add("hidden");
     heatersPage.classList.remove("hidden");
     hotapEl.classList.add("hidden");
+    basicEl.classList.remove("hidden");
+    applPage.style.setProperty("min-height", "auto"); // Убираем минимальную высоту
   } else if (e.target.classList.contains("sinkBtn")) {
-    applPage.classList.add("hidden");
+    hotapEl.classList.remove("hidden");
     heatersPage.classList.remove("hidden");
     basicEl.classList.add("hidden");
+    applPage.style.setProperty("min-height", "auto"); // Убираем минимальную высоту
   } else if (
     e.target.classList.contains("homeBtn") ||
     e.target.classList.contains("businessBtn")
   ) {
-    applPage.classList.add("hidden");
     heatersPage.classList.remove("hidden");
+    hotapEl.classList.remove("hidden");
+    basicEl.classList.remove("hidden");
+    applPage.style.setProperty("min-height", "auto"); // Убираем минимальную высоту
   }
 });
 
