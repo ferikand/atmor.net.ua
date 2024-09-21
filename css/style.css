@@ -200,6 +200,12 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  /* position: absolute;
+  bottom: 0%; */
+  /* position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%; */
 }
 .last {
   display: -webkit-box;
@@ -409,6 +415,23 @@ main {
   display: flex;
   flex-direction: column;
   border: 1px solid black;
+}
+
+.hotapBigImgContainer {
+  width: 130%;
+}
+
+.hotapInfoText {
+  padding-right: 5%;
+}
+
+.hotapBigImg {
+  width: 100%;
+}
+
+.hotapInfoContainer {
+  display: flex;
+  flex-direction: row;
 }
 
 @media (max-width: 767px) {
