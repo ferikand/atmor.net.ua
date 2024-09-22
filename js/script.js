@@ -119,17 +119,18 @@ const showSection = (section) => {
   }
 };
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   const currentPage = window.location.pathname;
-//   const navLinks = document.querySelectorAll(".nav-link");
+document.addEventListener("DOMContentLoaded", function () {
+  const currentPage = window.location.pathname.slice(1);
 
-//   navLinks.forEach(function (link) {
-//     const linkPath = link.getAttribute("href");
+  const navLinks = document.querySelectorAll(".nav-link");
 
-//     if (linkPath === currentPage) {
-//       link.parentElement.classList.add("active"); // Добавляем класс active к родительскому li
-//     } else {
-//       link.parentElement.classList.remove("active"); // Убираем класс active от остальных
-//     }
-//   });
-// });
+  navLinks.forEach(function (link) {
+    const linkPath = link.getAttribute("href");
+
+    if (linkPath === currentPage) {
+      link.parentElement.classList.add("active"); // Добавляем класс active к родительскому li
+    } else {
+      link.parentElement.classList.remove("active"); // Убираем класс active от остальных
+    }
+  });
+});
