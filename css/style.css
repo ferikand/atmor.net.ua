@@ -200,12 +200,6 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /* position: absolute;
-  bottom: 0%; */
-  /* position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%; */
   bottom: 10px;
 }
 .last {
@@ -505,6 +499,16 @@ main {
 
 .hidden {
   display: none;
+}
+
+section {
+  flex: 1; /* Занимает оставшееся пространство */
+  min-width: 300px; /* Минимальная ширина */
+}
+
+.causesLinks {
+  flex: 0 0 200px; /* Ширина aside */
+  margin-left: 20px; /* Отступ */
 }
 
 display: -ms-flexbox;
