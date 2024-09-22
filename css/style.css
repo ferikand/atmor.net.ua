@@ -511,5 +511,10 @@ section {
   margin-left: 20px; /* Отступ */
 }
 
+.heatersLinkToItsPage {
+  text-decoration: none !important;
+  color: inherit !important; /* Убирает цвет ссылки, если он переопределен */
+}
+
 display: -ms-flexbox;
 display: flex;
