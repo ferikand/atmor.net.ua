@@ -516,5 +516,26 @@ section {
   color: inherit !important; /* Убирает цвет ссылки, если он переопределен */
 }
 
+/* Убираем фиксированное выделение первой кнопки */
+nav ul li:nth-child(1) {
+  background-color: #e2e3e5; /* Фон обычной кнопки */
+  color: #333; /* Цвет текста обычной кнопки */
+}
+
+/* Стиль для активной кнопки — изменяем только фон */
+nav ul li.active {
+  background-color: #dc0132; /* Красный фон для активной кнопки */
+  color: #fff; /* Белый текст для активной кнопки */
+}
+
+nav ul li.active a {
+  color: #fff; /* Убедимся, что цвет текста внутри ссылки тоже белый */
+}
+
+.navbar-nav .nav-item.active {
+  background-color: #dc0132 !important; /* Красный фон для активной кнопки */
+  color: #fff !important; /* Белый текст для активной кнопки */
+}
+
 display: -ms-flexbox;
 display: flex;

@@ -90,11 +90,13 @@ document.addEventListener("click", (e) => {
     hotapEl.classList.add("hidden");
     basicEl.classList.remove("hidden");
     applPage.style.setProperty("min-height", "auto"); // Убираем минимальную высоту
+    applPage.classList.add("hidden");
   } else if (e.target.classList.contains("sinkBtn")) {
     hotapEl.classList.remove("hidden");
     heatersPage.classList.remove("hidden");
     basicEl.classList.add("hidden");
     applPage.style.setProperty("min-height", "auto"); // Убираем минимальную высоту
+    applPage.classList.add("hidden");
   } else if (
     e.target.classList.contains("homeBtn") ||
     e.target.classList.contains("businessBtn")
@@ -103,6 +105,7 @@ document.addEventListener("click", (e) => {
     hotapEl.classList.remove("hidden");
     basicEl.classList.remove("hidden");
     applPage.style.setProperty("min-height", "auto"); // Убираем минимальную высоту
+    applPage.classList.add("hidden");
   }
 });
 
@@ -115,3 +118,18 @@ const showSection = (section) => {
     section.classList.remove("hidden");
   }
 };
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   const currentPage = window.location.pathname;
+//   const navLinks = document.querySelectorAll(".nav-link");
+
+//   navLinks.forEach(function (link) {
+//     const linkPath = link.getAttribute("href");
+
+//     if (linkPath === currentPage) {
+//       link.parentElement.classList.add("active"); // Добавляем класс active к родительскому li
+//     } else {
+//       link.parentElement.classList.remove("active"); // Убираем класс active от остальных
+//     }
+//   });
+// });
